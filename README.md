@@ -1,7 +1,9 @@
-# Start html template
-This is simple start html template.
 
 Used technologies:
 - GULP
 - PUG => HTML
-- SASS => CSS
+- SCSS => CSS
+
+Собранный проэкт лежит в папке app
+Исходники в папке src
+Запускается коммандой gulp watch

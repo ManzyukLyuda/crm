@@ -147,19 +147,6 @@ ul{
 
 
 
-.menu-item{
-	padding-left: 20px;
-	box-shadow: none;
-	transition: .3s;
-	&__active, &:hover{
-		@extend .menu-item;
-		background:#442a9d;
-		box-shadow: inset 5px 0px 0 #ffc12d;
-		a{opacity: 1;}
-	}
-}
-
-
 
 @import "components/tabs";
 @import "components/header";
