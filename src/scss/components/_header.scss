@@ -1,0 +1,67 @@
+.menu-item_link{
+	display: block;
+	line-height: 58px;
+	font-size: 18px;
+	font-weight: lighter;
+	border-bottom: 2px solid #384048;
+	padding-left: 48px;
+	color: #fff;
+}
+.logo{
+	display: block;
+	padding: 40px 24px;
+	color: #ffc12d;
+	font-size: 28px;
+}
+.dashboard, .customers, .reports, .calendar{
+	position: relative;
+	&::before{
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: 8px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+nav{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 318px;
+    margin: 0;
+    background:#303841;
+    ul{
+    	margin: 0;
+    }
+}
+.top-menu{
+	padding: 16px 36px 16px 318px;
+	display: flex;
+	align-items: center;
+	@extend %box-shadow;
+	& > *{flex-shrink: 0}
+}
+.top-menu_search{
+  border-width: 1px;
+  position: relative;
+  padding: 0 20px; 
+  border-color: rgb(237, 237, 237);
+  border-style: solid;
+  width: 282px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 4px;
+  color: rgb(153, 153, 153);
+  margin: 0 0 0 auto;
+  &::after{
+  	content: "";
+  	display: block;
+  	position: absolute;
+  	right: 0;
+  }
+}
+.dashboard::before{@include sprite ($dashboard)};
+.customers::before{@include sprite ($customers)};
+.reports::before{@include sprite ($reports)};
+.calendar::before{@include sprite ($calendar)};

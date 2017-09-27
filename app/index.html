@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="theme-color" content="#ccc">
+	<meta name="msapplication-navbutton-color" content="#ccc">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ccc">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<section class="main-content">
+		<header>
+			<nav>
+				<ul class="menu">
+					<li><a class="logo" href="#">CRM</a></li>
+					<li class="menu-item"><a class="menu-item_link dashboard" href="Dashboard.html">Dashboard</a></li>
+					<li class="menu-item"><a class="menu-item_link reports" href="Reports.html">Reports</a></li>
+					<li class="menu-item__active"><a class="menu-item_link customers" href="Customers.html">Customers</a></li>
+					<li class="menu-item"><a class="menu-item_link calendar" href="Calendar.html">Calendar</a></li>
+				</ul>
+			</nav>
+			<div class="top-menu">
+				<ul class="bread-crumbs">
+					<li><a href="customers.html">Customers</a>
+					</li>
+					<li><span>Max Jones</span>
+					</li>
+				</ul>
+				<input class="top-menu_search" type="search" placeholder="SEARCH"><a class="note" href="#" data-nouts="4"></a>
+				<div class="greeting">
+					<figur class="greeting_photo"><img src="img/lauren.jpg"></figur><span>Hello Lauren</span>
+				</div>
+			</div>
+		</header>
+		<section class="customer-card">
+			<div class="customer-card_wrap">
+				<figure class="customer-card_photo"><img src="img/max.jpg" alt="max jones"></figure>
+				<div class="customer-card_data">
+					<p class="customer-card-name" data-status="GOLD">MAX JONES</p>
+					<p class="customer-card-position">Sales &amp; Marketing</p>
+				</div>
+				<div class="customer-card_contacts">
+					<ul class="customer-card_contacts-list">
+						<li class="customer-card_phone">PHONE<a class="customer-card_contacts-item" src="tel:+31140 175 468">(+31) 140 175 468</a></li>
+						<li class="customer-card_adress">ADDRESS<span class="customer-card_contacts-item">Binnenweg 50, Rotterdam</span></li>
+					</ul>
+					<div class="btn">CREATE QOUTE</div>
+				</div>
+			</div>
+			<article>
+				<ul class="tabs">
+					<li class="tab active"><a href="#overview">OVERVIEW</a></li>
+					<li class="tab"><a href="#orders">ORDERS</a></li>
+					<li class="tab"><a href="#payments">PAYMENTS</a></li>
+				</ul>
+				<div class="tab-conatnt">
+					<div id="overview"></div>
+					<div id="orders"></div>
+					<div id="payments"></div>
+				</div>
+			</article>
+		</section>
+	</section>
+</body>

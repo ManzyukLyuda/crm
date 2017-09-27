@@ -1,0 +1,15 @@
+- var tabs = [{name: "Overview", href: "#overview", active: true}, {name: "Orders", href: "#orders"}, {name: "Payments", href:"#payments"}]
+article
+	ul.tabs
+		each tab in tabs
+			if (tab.active)
+				li(class="tab active")
+					a(href= tab.href)= tab.name.toUpperCase()
+			else
+				li(class="tab")
+					a(href= tab.href)= tab.name.toUpperCase()
+
+	.tab-conatnt
+		each tab in tabs
+			div(id= tab.name.toLowerCase())
+		

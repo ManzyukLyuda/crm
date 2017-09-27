@@ -1,0 +1,32 @@
+.tabs{
+	display: flex;
+	margin: 8px 0 0;
+	padding: 0 34px;
+}
+.tab-conatnt{
+	min-height: 211px;
+	background: #ededed;
+}
+.tab{
+	line-height: 64px;
+	margin: 0  11px;
+	padding: 0 20px;
+	color: #303841;
+	font-weight: bold;
+	font-size: 14px;
+}
+.tab.active{
+	position: relative;
+	&::after{
+		content: '';
+		display: block;
+		position: absolute;
+		left:0;
+		right: 0;
+		bottom: 0;
+  		background-color: rgb(68, 42, 157);
+  		height: 6px;
+  		border-radius: 5px;
+  		transform: translateY(50%);
+	}
+}

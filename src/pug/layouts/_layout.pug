@@ -1,0 +1,36 @@
+include ../mixins/_mixins
+-var customer = {name: "max jones", position: "Sales & Marketing",phoneCode: "+31", phone: "140 175 468", address: "Binnenweg 50, Rotterdam", photo: "img/max.jpg", status: "gold"}
+-var link = "tel:" + customer.phoneCode + customer.phone
+doctype html
+-var currentPage = "customers" 
+head
+	meta(charset="UTF-8")
+	block head-meta
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+	meta(name="theme-color" content="#ccc")
+	meta(name="msapplication-navbutton-color" content="#ccc")
+	meta(name="apple-mobile-web-app-status-bar-style" content="#ccc")
+	link(rel="stylesheet" href="css/style.min.css")
+	block noindex
+body
+	section.main-content
+		block header
+			include ../includes/_header
+		block main 
+			section.customer-card
+				.customer-card_wrap
+					figure.customer-card_photo
+						img(src= customer.photo, alt= customer.name)
+					.customer-card_data
+						p.customer-card-name(data-status= customer.status.toUpperCase() )= customer.name.toUpperCase()
+						p.customer-card-position= customer.position 
+					.customer-card_contacts
+						ul.customer-card_contacts-list
+							li.customer-card_phone PHONE
+								a(src= link, class="customer-card_contacts-item") (#{customer.phoneCode}) #{customer.phone}
+							li.customer-card_adress ADDRESS
+								span.customer-card_contacts-item #{customer.address}
+
+						.btn CREATE QOUTE
+				include ../includes/_tabs

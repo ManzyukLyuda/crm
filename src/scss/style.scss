@@ -1,0 +1,167 @@
+@import "sprite";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+%box-shadow{
+	    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+	
+body{
+	margin: 0;
+	background: #282828;
+	font-family: 'Open Sans', sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #442a9d;
+	&:hover{
+		opacity: .8;
+	}
+}
+p{
+	margin: 0 0 10px;
+	color: #4f4f4f;
+}
+img{
+	max-width: 100%;
+}
+figure{
+	margin: 0;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.main-content{
+	min-width: 1100px;
+	max-width: 1415px;
+	//margin: 0 auto;
+	position: relative;
+	background:#ffffff;
+}
+
+.customer-card{
+	padding: 0 0 0 318px;
+}
+
+
+.note{
+	position: relative;
+	@include sprite ($notification);
+	margin: 0 40px;
+	&::after{
+		content: attr(data-nouts);
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-radius: 50%;
+		background: #f14e95;
+		color: #fff;
+		overflow: hidden;
+		font-size: 12px;
+		transform: translate(11px, -3px);
+	}
+}
+.greeting{
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+.greeting_photo{
+	display: block;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 10px;
+}
+.customer-card_photo{
+	float: left;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.customer-card-name{
+	position: relative;
+	font-size: 20px;
+	font-weight: bold;
+	&::after{
+		content: attr(data-status);
+		margin-left: 20px;
+		display: inline-block;
+		height: 18px;
+		line-height: 18px;
+		color: #fff;
+		background: #ffc12d;
+		border-radius: 4px;
+		padding: 0 8px;
+		font-size: 12px;
+		font-weight: bold;
+	}
+}
+.customer-card-position{
+	color: #999999;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 15px;
+}
+.customer-card_phone, .customer-card_adress{
+	color: #999999;
+	font-weight: bold;
+	font-size: 12px;
+}
+.customer-card_data{
+	margin:0 0 0 133px;
+	border-bottom: 2px solid #f7f7f7;
+}
+.customer-card_contacts{
+	margin:0 0 0 133px;
+	padding: 20px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+.customer-card_contacts-list{
+	display: flex;
+	color: #999999;
+}
+.customer-card_contacts-item{
+	display: block;
+	color: #442a9d;
+	padding: 10px 0 0;
+	font-weight: bold;
+	font-size: 14px;
+}
+.customer-card_adress{
+	margin: 0 0 0 160px;
+}
+.customer-card_wrap{
+	padding: 54px 35px;
+}
+
+
+
+.menu-item{
+	padding-left: 20px;
+	box-shadow: none;
+	transition: .3s;
+	&__active, &:hover{
+		@extend .menu-item;
+		background:#442a9d;
+		box-shadow: inset 5px 0px 0 #ffc12d;
+		a{opacity: 1;}
+	}
+}
+
+
+
+@import "components/tabs";
+@import "components/header";
+@import "components/btn";
+@import "components/bread-crumbs";

@@ -1,0 +1,31 @@
+-var menu= [{name: 'Dashboard', href:'Dashboard.html'}, {name: 'Reports', href:'Reports.html'}, {name: 'Customers', href:'Customers.html'}, {name: 'Calendar', href:'Calendar.html'}]
+-var breadCrambs = [{name: 'Customers', href:'customers.html'}, {name: 'Max Jones', href:'#'}]
+-var user = {name:"Lauren", img:"img/lauren.jpg"}
+header
+	nav
+		ul.menu
+			li
+				a(href="#", class="logo") CRM
+			each item in menu
+				if item.name.toLowerCase() === currentPage.toLowerCase()
+					li.menu-item__active
+						a(href= item.href, class= "menu-item_link " + item.name.toLowerCase())= item.name
+				else
+					li.menu-item
+						a(href= item.href, class= "menu-item_link " + item.name.toLowerCase())= item.name
+	.top-menu
+		ul.bread-crumbs
+			each item in breadCrambs
+				li
+					if customer.name.toLowerCase() === item.name.toLowerCase()
+						span= item.name
+					else
+						a(href= item.href)= item.name
+		input.top-menu_search(type="search", placeholder="SEARCH")
+		a(href="#", data-nouts="4", class="note")
+		.greeting
+			figur.greeting_photo
+				img(src= user.img) 
+			span Hello #{user.name}
+
+

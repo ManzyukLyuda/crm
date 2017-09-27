@@ -1,0 +1,14 @@
+mixin head-meta(title, description, href)
+	title=title
+	meta(name="description" content=description)
+	link(rel="canonical" href=href)
+
+
+mixin table(lines, colloms)
+		table
+			-for(var i=1; i<=lines; i++){
+				tr
+				-for(var j=1; j<=colloms; j++){
+					td colloms
+				-}
+			-}
